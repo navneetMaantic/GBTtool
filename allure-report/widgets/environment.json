@@ -1,0 +1,10 @@
+[ {
+  "values" : [ "Windows" ],
+  "name" : "Operating System"
+}, {
+  "values" : [ "chrome" ],
+  "name" : "Browser"
+}, {
+  "values" : [ "https://bfs.maanticpegaservices.com/prweb" ],
+  "name" : "Application"
+} ]

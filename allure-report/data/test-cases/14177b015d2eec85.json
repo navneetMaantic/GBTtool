@@ -1,0 +1,119 @@
+{
+  "uid" : "14177b015d2eec85",
+  "name" : "Verifying Searching of new contact.",
+  "fullName" : "com.maantic.automation.tests.SearchContactTest.TC_01_VerifySearchingNewlyCreatedContact",
+  "historyId" : "864fc70c228c214e0871e2fbacfddd46",
+  "time" : {
+    "start" : 1661323742177,
+    "stop" : 1661323767870,
+    "duration" : 25693
+  },
+  "description" : "Test Case Description: Verify the contact is searched successfully.",
+  "descriptionHtml" : "<p>Test Case Description: Verify the contact is searched successfully.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "getEnvironment",
+    "time" : {
+      "start" : 1661323289725,
+      "stop" : 1661323289919,
+      "duration" : 194
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "initializeDriver",
+    "time" : {
+      "start" : 1661323737347,
+      "stop" : 1661323742169,
+      "duration" : 4822
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "closeDriver",
+    "time" : {
+      "start" : 1661323767963,
+      "stop" : 1661323769272,
+      "duration" : 1309
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.maantic.automation.tests.SearchContactTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.maantic.automation.tests.SearchContactTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "TC_01_VerifySearchingNewlyCreatedContact"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Pega Demo - Automation"
+  }, {
+    "name" : "suite",
+    "value" : "Pega Demo - Automation Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.maantic.automation.tests.SearchContactTest"
+  }, {
+    "name" : "host",
+    "value" : "GopalS"
+  }, {
+    "name" : "thread",
+    "value" : "34564@GopalS.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "14177b015d2eec85.json",
+  "parameterValues" : [ ]
+}

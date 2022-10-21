@@ -1,0 +1,161 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.maantic.automation.tests",
+    "children" : [ {
+      "name" : "LoginTest",
+      "children" : [ {
+        "name" : "TC_01_VerifyLoginPageTitle",
+        "uid" : "7a9978664b6a6142",
+        "parentUid" : "900418222000067871ff1fad20906872",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323304129,
+          "stop" : 1661323304315,
+          "duration" : 186
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC_02_VerifyLoggedInSuccessfully",
+        "uid" : "aada24879213c259",
+        "parentUid" : "900418222000067871ff1fad20906872",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323310959,
+          "stop" : 1661323341877,
+          "duration" : 30918
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "900418222000067871ff1fad20906872"
+    }, {
+      "name" : "DashboardTest",
+      "children" : [ {
+        "name" : "TC_01_VerifyDashboardPageTitle",
+        "uid" : "a4df503ad6d0ff64",
+        "parentUid" : "e9aa4e5f492e201f6d4036b84f7cb764",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323348452,
+          "stop" : 1661323383918,
+          "duration" : 35466
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC_02_VerifyLoggedInUserName",
+        "uid" : "c9eca221c8644551",
+        "parentUid" : "e9aa4e5f492e201f6d4036b84f7cb764",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323392463,
+          "stop" : 1661323414995,
+          "duration" : 22532
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e9aa4e5f492e201f6d4036b84f7cb764"
+    }, {
+      "name" : "CreateContactTest",
+      "children" : [ {
+        "name" : "TC_01_VerifyIsNewContactPageDisplayed",
+        "uid" : "ca0ab6c42949f7e2",
+        "parentUid" : "b63ce01e017b8c9e83dceddc9d8ae8b6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1661323457320,
+          "stop" : 1661323487713,
+          "duration" : 30393
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "TC_02_CreateNewContactSuccessfully",
+        "uid" : "4a46bd40622b09f4",
+        "parentUid" : "b63ce01e017b8c9e83dceddc9d8ae8b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323528376,
+          "stop" : 1661323577076,
+          "duration" : 48700
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "{Email=gopal.sutradhar@maantic.com, Prefix=Mr., LastName=Sutradhar_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Gopal_Test}" ]
+      }, {
+        "name" : "TC_02_CreateNewContactSuccessfully",
+        "uid" : "7f708aab1e5ffa93",
+        "parentUid" : "b63ce01e017b8c9e83dceddc9d8ae8b6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1661323662109,
+          "stop" : 1661323736160,
+          "duration" : 74051
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "{Email=avinash.gupta@maantic.com, Prefix=Mr., LastName=Gupta_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Avinash_Test}" ]
+      } ],
+      "uid" : "b63ce01e017b8c9e83dceddc9d8ae8b6"
+    }, {
+      "name" : "SearchContactTest",
+      "children" : [ {
+        "name" : "TC_01_VerifySearchingNewlyCreatedContact",
+        "uid" : "14177b015d2eec85",
+        "parentUid" : "dfb9879bcfd1e4e9b9916cbd1d110c96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1661323742177,
+          "stop" : 1661323767870,
+          "duration" : 25693
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dfb9879bcfd1e4e9b9916cbd1d110c96"
+    } ],
+    "uid" : "com.maantic.automation.tests"
+  } ]
+}

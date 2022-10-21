@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="testng" type="repository">
+    <properties maven-id="org.testng:testng:7.4.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.4.0/testng-7.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.78/jcommander-1.78.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/3.5.1/jquery-3.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

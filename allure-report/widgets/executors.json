@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://localhost:8080/",
+  "buildOrder" : 1,
+  "buildName" : "pega-demo-automation #1",
+  "buildUrl" : "http://localhost:8080/job/pega-demo-automation/1/",
+  "reportName" : "AllureReport",
+  "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure"
+} ]

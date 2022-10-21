@@ -1,0 +1,9 @@
+[ {
+  "buildOrder" : 1,
+  "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "run" : 8,
+    "retry" : 3
+  }
+} ]

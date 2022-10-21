@@ -1,0 +1,131 @@
+{
+  "uid" : "4a46bd40622b09f4",
+  "name" : "Verifying the contact is created successfully.",
+  "fullName" : "com.maantic.automation.tests.CreateContactTest.TC_02_CreateNewContactSuccessfully",
+  "historyId" : "ded859af8b119a848780e2d6bc941fd2",
+  "time" : {
+    "start" : 1661323528376,
+    "stop" : 1661323577076,
+    "duration" : 48700
+  },
+  "description" : "Test Case Description: Verify the new contact is created successfully.",
+  "descriptionHtml" : "<p>Test Case Description: Verify the new contact is created successfully.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "getEnvironment",
+    "time" : {
+      "start" : 1661323289725,
+      "stop" : 1661323289919,
+      "duration" : 194
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "initializeDriver",
+    "time" : {
+      "start" : 1661323523344,
+      "stop" : 1661323528359,
+      "duration" : 5015
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "closeDriver",
+    "time" : {
+      "start" : 1661323577080,
+      "stop" : 1661323577829,
+      "duration" : 749
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.maantic.automation.tests.CreateContactTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.maantic.automation.tests.CreateContactTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "TC_02_CreateNewContactSuccessfully"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Pega Demo - Automation"
+  }, {
+    "name" : "suite",
+    "value" : "Pega Demo - Automation Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.maantic.automation.tests.CreateContactTest"
+  }, {
+    "name" : "host",
+    "value" : "GopalS"
+  }, {
+    "name" : "thread",
+    "value" : "34564@GopalS.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "{Email=gopal.sutradhar@maantic.com, Prefix=Mr., LastName=Sutradhar_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Gopal_Test}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ {
+      "uid" : "abac5f6c6e912ade",
+      "status" : "skipped",
+      "statusDetails" : "Must provide a location for a move action.",
+      "time" : {
+        "start" : 1661323496357,
+        "stop" : 1661323522005,
+        "duration" : 25648
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4a46bd40622b09f4.json",
+  "parameterValues" : [ "{Email=gopal.sutradhar@maantic.com, Prefix=Mr., LastName=Sutradhar_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Gopal_Test}" ]
+}

@@ -1,0 +1,119 @@
+{
+  "uid" : "c9eca221c8644551",
+  "name" : "Verifying LoggedInUserName",
+  "fullName" : "com.maantic.automation.tests.DashboardTest.TC_02_VerifyLoggedInUserName",
+  "historyId" : "851d7776b7949d3147ee2d0745117c72",
+  "time" : {
+    "start" : 1661323392463,
+    "stop" : 1661323414995,
+    "duration" : 22532
+  },
+  "description" : "Test Case Description: Verify the LoggedInUserName",
+  "descriptionHtml" : "<p>Test Case Description: Verify the LoggedInUserName</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "getEnvironment",
+    "time" : {
+      "start" : 1661323289725,
+      "stop" : 1661323289919,
+      "duration" : 194
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "initializeDriver",
+    "time" : {
+      "start" : 1661323385357,
+      "stop" : 1661323392451,
+      "duration" : 7094
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "closeDriver",
+    "time" : {
+      "start" : 1661323414999,
+      "stop" : 1661323416344,
+      "duration" : 1345
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.maantic.automation.tests.DashboardTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.maantic.automation.tests.DashboardTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "TC_02_VerifyLoggedInUserName"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Pega Demo - Automation"
+  }, {
+    "name" : "suite",
+    "value" : "Pega Demo - Automation Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.maantic.automation.tests.DashboardTest"
+  }, {
+    "name" : "host",
+    "value" : "GopalS"
+  }, {
+    "name" : "thread",
+    "value" : "34564@GopalS.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c9eca221c8644551.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,165 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Pega Demo - Automation",
+    "children" : [ {
+      "name" : "Pega Demo - Automation Test",
+      "children" : [ {
+        "name" : "com.maantic.automation.tests.LoginTest",
+        "children" : [ {
+          "name" : "Verifying Login Page Title",
+          "uid" : "7a9978664b6a6142",
+          "parentUid" : "540f5a8d81ec86e575306ffef409c495",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323304129,
+            "stop" : 1661323304315,
+            "duration" : 186
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verifying Valid Login",
+          "uid" : "aada24879213c259",
+          "parentUid" : "540f5a8d81ec86e575306ffef409c495",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323310959,
+            "stop" : 1661323341877,
+            "duration" : 30918
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "540f5a8d81ec86e575306ffef409c495"
+      }, {
+        "name" : "com.maantic.automation.tests.DashboardTest",
+        "children" : [ {
+          "name" : "Verifying Dashboard Page Title",
+          "uid" : "a4df503ad6d0ff64",
+          "parentUid" : "cddf0ee0bfdc6403d57bc190c16b9a83",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323348452,
+            "stop" : 1661323383918,
+            "duration" : 35466
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verifying LoggedInUserName",
+          "uid" : "c9eca221c8644551",
+          "parentUid" : "cddf0ee0bfdc6403d57bc190c16b9a83",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323392463,
+            "stop" : 1661323414995,
+            "duration" : 22532
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "cddf0ee0bfdc6403d57bc190c16b9a83"
+      }, {
+        "name" : "com.maantic.automation.tests.CreateContactTest",
+        "children" : [ {
+          "name" : "Verifying IsNewContactPageDisplayed",
+          "uid" : "ca0ab6c42949f7e2",
+          "parentUid" : "962ceb572b4fdc54a03b17ca50bca8da",
+          "status" : "broken",
+          "time" : {
+            "start" : 1661323457320,
+            "stop" : 1661323487713,
+            "duration" : 30393
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 1,
+          "retriesStatusChange" : true,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verifying the contact is created successfully.",
+          "uid" : "4a46bd40622b09f4",
+          "parentUid" : "962ceb572b4fdc54a03b17ca50bca8da",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323528376,
+            "stop" : 1661323577076,
+            "duration" : 48700
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 1,
+          "retriesStatusChange" : true,
+          "parameters" : [ "{Email=gopal.sutradhar@maantic.com, Prefix=Mr., LastName=Sutradhar_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Gopal_Test}" ]
+        }, {
+          "name" : "Verifying the contact is created successfully.",
+          "uid" : "7f708aab1e5ffa93",
+          "parentUid" : "962ceb572b4fdc54a03b17ca50bca8da",
+          "status" : "broken",
+          "time" : {
+            "start" : 1661323662109,
+            "stop" : 1661323736160,
+            "duration" : 74051
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 1,
+          "retriesStatusChange" : true,
+          "parameters" : [ "{Email=avinash.gupta@maantic.com, Prefix=Mr., LastName=Gupta_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Avinash_Test}" ]
+        } ],
+        "uid" : "962ceb572b4fdc54a03b17ca50bca8da"
+      }, {
+        "name" : "com.maantic.automation.tests.SearchContactTest",
+        "children" : [ {
+          "name" : "Verifying Searching of new contact.",
+          "uid" : "14177b015d2eec85",
+          "parentUid" : "525a72b2b598b610958e6aafb99018ff",
+          "status" : "passed",
+          "time" : {
+            "start" : 1661323742177,
+            "stop" : 1661323767870,
+            "duration" : 25693
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "525a72b2b598b610958e6aafb99018ff"
+      } ],
+      "uid" : "a867f98ab11ab75445b0129096264f62"
+    } ],
+    "uid" : "8dd29ac00ed904056d1d2f2197b855a4"
+  } ]
+}

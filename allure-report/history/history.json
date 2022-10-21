@@ -1,0 +1,164 @@
+{
+  "ded859af8b119a848780e2d6bc941fd2" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4a46bd40622b09f4",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/4a46bd40622b09f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323528376,
+        "stop" : 1661323577076,
+        "duration" : 48700
+      }
+    } ]
+  },
+  "df1e02ff64925b9241b402ab8fc638e6" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ca0ab6c42949f7e2",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/ca0ab6c42949f7e2",
+      "status" : "broken",
+      "statusDetails" : "timeout: Timed out receiving message from renderer: 30.000\n  (Session info: chrome=104.0.5112.102)\nBuild info: version: '4.0.0', revision: '3a21814679'\nSystem info: host: 'GOPALS', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [bd23b7c80acce995b77177b97d4ea1b9, clickElement {id=4eeaa246-d896-4cf8-9f48-db30dec5df88}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56797/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on WINDOWS (bd23b7c80acce995b77177b97d4ea1b9)] -> xpath: //span[@class='loginButtonText']]\nSession ID: bd23b7c80acce995b77177b97d4ea1b9",
+      "time" : {
+        "start" : 1661323457320,
+        "stop" : 1661323487713,
+        "duration" : 30393
+      }
+    } ]
+  },
+  "f8167e071853d4cede669ca39aa17d2c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7f708aab1e5ffa93",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/7f708aab1e5ffa93",
+      "status" : "broken",
+      "statusDetails" : "Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),'gopal.sutradhar@maantic.com')] (tried for 30 second(s) with 500 milliseconds interval)\nBuild info: version: '4.0.0', revision: '3a21814679'\nSystem info: host: 'GOPALS', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:57109}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57109/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8c77e2e44de25b432ff997b90a356319",
+      "time" : {
+        "start" : 1661323662109,
+        "stop" : 1661323736160,
+        "duration" : 74051
+      }
+    } ]
+  },
+  "a9538c543677fe7065b7790416f59a23" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7a9978664b6a6142",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/7a9978664b6a6142",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323304129,
+        "stop" : 1661323304315,
+        "duration" : 186
+      }
+    } ]
+  },
+  "864fc70c228c214e0871e2fbacfddd46" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "14177b015d2eec85",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/14177b015d2eec85",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323742177,
+        "stop" : 1661323767870,
+        "duration" : 25693
+      }
+    } ]
+  },
+  "31d6f5bc38bbf6e9c2b2c9f3484cb6ca" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aada24879213c259",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/aada24879213c259",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323310959,
+        "stop" : 1661323341877,
+        "duration" : 30918
+      }
+    } ]
+  },
+  "6c350bc749bb1f209f38580f6bc1d37e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a4df503ad6d0ff64",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/a4df503ad6d0ff64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323348452,
+        "stop" : 1661323383918,
+        "duration" : 35466
+      }
+    } ]
+  },
+  "851d7776b7949d3147ee2d0745117c72" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c9eca221c8644551",
+      "reportUrl" : "http://localhost:8080/job/pega-demo-automation/1/allure/#testresult/c9eca221c8644551",
+      "status" : "passed",
+      "time" : {
+        "start" : 1661323392463,
+        "stop" : 1661323414995,
+        "duration" : 22532
+      }
+    } ]
+  }
+}

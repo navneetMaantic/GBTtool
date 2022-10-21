@@ -1,0 +1,119 @@
+{
+  "uid" : "aada24879213c259",
+  "name" : "Verifying Valid Login",
+  "fullName" : "com.maantic.automation.tests.LoginTest.TC_02_VerifyLoggedInSuccessfully",
+  "historyId" : "31d6f5bc38bbf6e9c2b2c9f3484cb6ca",
+  "time" : {
+    "start" : 1661323310959,
+    "stop" : 1661323341877,
+    "duration" : 30918
+  },
+  "description" : "Test Case Description: Verify the valid login.",
+  "descriptionHtml" : "<p>Test Case Description: Verify the valid login.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "getEnvironment",
+    "time" : {
+      "start" : 1661323289725,
+      "stop" : 1661323289919,
+      "duration" : 194
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "initializeDriver",
+    "time" : {
+      "start" : 1661323305907,
+      "stop" : 1661323310945,
+      "duration" : 5038
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "closeDriver",
+    "time" : {
+      "start" : 1661323341883,
+      "stop" : 1661323342772,
+      "duration" : 889
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.maantic.automation.tests.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.maantic.automation.tests.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "TC_02_VerifyLoggedInSuccessfully"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Pega Demo - Automation"
+  }, {
+    "name" : "suite",
+    "value" : "Pega Demo - Automation Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.maantic.automation.tests.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "GopalS"
+  }, {
+    "name" : "thread",
+    "value" : "34564@GopalS.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aada24879213c259.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,4 @@
+com\maantic\automation\tests\CreateContactTest.class
+com\maantic\automation\tests\SearchContactTest.class
+com\maantic\automation\tests\LoginTest.class
+com\maantic\automation\tests\DashboardTest.class

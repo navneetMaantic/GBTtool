@@ -1,0 +1,51 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "timeout: Timed out receiving message from renderer: 30.000\n  (Session info: chrome=104.0.5112.102)\nBuild info: version: '4.0.0', revision: '3a21814679'\nSystem info: host: 'GOPALS', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [bd23b7c80acce995b77177b97d4ea1b9, clickElement {id=4eeaa246-d896-4cf8-9f48-db30dec5df88}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56797}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56797/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on WINDOWS (bd23b7c80acce995b77177b97d4ea1b9)] -> xpath: //span[@class='loginButtonText']]\nSession ID: bd23b7c80acce995b77177b97d4ea1b9",
+      "children" : [ {
+        "name" : "Verifying IsNewContactPageDisplayed",
+        "uid" : "ca0ab6c42949f7e2",
+        "parentUid" : "d8e79432c1d27431ffd26b01c1392629",
+        "status" : "broken",
+        "time" : {
+          "start" : 1661323457320,
+          "stop" : 1661323487713,
+          "duration" : 30393
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d8e79432c1d27431ffd26b01c1392629"
+    }, {
+      "name" : "Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),'gopal.sutradhar@maantic.com')] (tried for 30 second(s) with 500 milliseconds interval)\nBuild info: version: '4.0.0', revision: '3a21814679'\nSystem info: host: 'GOPALS', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9.1'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\User\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:57109}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57109/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8c77e2e44de25b432ff997b90a356319",
+      "children" : [ {
+        "name" : "Verifying the contact is created successfully.",
+        "uid" : "7f708aab1e5ffa93",
+        "parentUid" : "35f58538b234946895156d240564c00d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1661323662109,
+          "stop" : 1661323736160,
+          "duration" : 74051
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "{Email=avinash.gupta@maantic.com, Prefix=Mr., LastName=Gupta_Test, TCName=TC_02_CreateNewContactSuccessfully, FirstName=Avinash_Test}" ]
+      } ],
+      "uid" : "35f58538b234946895156d240564c00d"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

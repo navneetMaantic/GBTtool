@@ -1,0 +1,81 @@
+[ {
+  "uid" : "c9eca221c8644551",
+  "name" : "Verifying LoggedInUserName",
+  "time" : {
+    "start" : 1661323392463,
+    "stop" : 1661323414995,
+    "duration" : 22532
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca0ab6c42949f7e2",
+  "name" : "Verifying IsNewContactPageDisplayed",
+  "time" : {
+    "start" : 1661323457320,
+    "stop" : 1661323487713,
+    "duration" : 30393
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a4df503ad6d0ff64",
+  "name" : "Verifying Dashboard Page Title",
+  "time" : {
+    "start" : 1661323348452,
+    "stop" : 1661323383918,
+    "duration" : 35466
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "14177b015d2eec85",
+  "name" : "Verifying Searching of new contact.",
+  "time" : {
+    "start" : 1661323742177,
+    "stop" : 1661323767870,
+    "duration" : 25693
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4a46bd40622b09f4",
+  "name" : "Verifying the contact is created successfully.",
+  "time" : {
+    "start" : 1661323528376,
+    "stop" : 1661323577076,
+    "duration" : 48700
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "aada24879213c259",
+  "name" : "Verifying Valid Login",
+  "time" : {
+    "start" : 1661323310959,
+    "stop" : 1661323341877,
+    "duration" : 30918
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "7a9978664b6a6142",
+  "name" : "Verifying Login Page Title",
+  "time" : {
+    "start" : 1661323304129,
+    "stop" : 1661323304315,
+    "duration" : 186
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f708aab1e5ffa93",
+  "name" : "Verifying the contact is created successfully.",
+  "time" : {
+    "start" : 1661323662109,
+    "stop" : 1661323736160,
+    "duration" : 74051
+  },
+  "status" : "broken",
+  "severity" : "blocker"
+} ]

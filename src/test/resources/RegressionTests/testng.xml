@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Demo - Test" parallel="methods" thread-count="2" data-provider-thread-count="2">
+    <!--<suite name="Selenium Demo - Test" parallel="methods" thread-count="2">-->
+    <listeners>
+         <listener class-name="com.demo.selenium.listeners.AllureListeners" />
+        <listener class-name="com.demo.selenium.listeners.AnnotationTransformer" />
+     </listeners>
+     <test name="Selenium Demo Test" >
+         <groups>
+             <run>
+                 <include name="Regression"></include>
+             </run>
+         </groups>
+         <classes>
+             <class name="com.maantic.automation.tests.LoginTest"/>
+             <class name="com.maantic.automation.tests.DashboardTest"/>
+             <class name="com.maantic.automation.tests.CreateContactTest"/>
+             <class name="com.maantic.automation.tests.SearchContactTest"/>
+         </classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->
