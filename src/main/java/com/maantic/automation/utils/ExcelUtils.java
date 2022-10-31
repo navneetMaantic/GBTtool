@@ -68,9 +68,9 @@ public class ExcelUtils {
 
             for (int i = 1; i <= lastRowNum; i++) {
                 if (wSheet.getRow(i).getCell(0).toString().equals(ruleType)){
-                    System.out.println("Row number: "+ i);
-                    XSSFCell cell = wSheet.getRow(i).getCell(colNum);   //column 'Actual'=17
-                    //cell.setCellType(CellType.STRING);
+                    XSSFCell cell = wSheet.getRow(i).createCell(colNum);
+                    //XSSFCell cell = wSheet.getRow(i).getCell(colNum);
+                    cell.setCellType(CellType.STRING);
                     cell.setCellValue(writeOutput);
                     file.close();
                     break;
@@ -84,6 +84,7 @@ public class ExcelUtils {
             FileOutputStream out = new FileOutputStream(new
                     File(Constants.TEST_OUTPUT_SHEET_PATH));
             workbook.write(out);
+            workbook.close();
             out.close();
             System.out.println("Output generated successfully");
         } catch (Exception e) {
