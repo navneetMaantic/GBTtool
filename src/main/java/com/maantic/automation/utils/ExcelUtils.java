@@ -82,7 +82,7 @@ public class ExcelUtils {
         }
         try {
             FileOutputStream out = new FileOutputStream(new
-                    File(Constants.TEST_OUTPUT_SHEET_PATH));
+                    File(Constants.TEST_DATA_SHEET_PATH));
             workbook.write(out);
             workbook.close();
             out.close();

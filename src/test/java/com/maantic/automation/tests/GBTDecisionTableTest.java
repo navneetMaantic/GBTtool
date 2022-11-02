@@ -37,10 +37,10 @@ public class GBTDecisionTableTest extends BasePage {
         dtPage.clickActionsRunOfDecisionTable();
         //now switches to decision table window
         String dt_output = dtPage.switchWindowDecisionTable(map.get("Param1"));
-        //writing 'actual' result in output file
+        //writing 'actual' result in file
         ExcelUtils.writeExcelData(dt_output, map.get("RuleType"), 17);  //'Actual' column=17
         Thread.sleep(5000);
-        //writing 'pass/fail' in output file
+        //writing 'pass/fail' in file
         if(map.get("Expected").equalsIgnoreCase(dt_output)){
             ExcelUtils.writeExcelData("Pass", map.get("RuleType"), 18); //'Pass/Fail' column=18
             System.out.println("Pass");
