@@ -67,7 +67,8 @@ public class ExcelUtils {
             //int lastColNum = wSheet.getRow(0).getLastCellNum();
 
             for (int i = 1; i <= lastRowNum; i++) {
-                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType)){
+                //check if current row's ruletype is same & pass/fail is NULL
+                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType) && wSheet.getRow(i).getCell(18) == null){
                     XSSFCell cell = wSheet.getRow(i).createCell(colNum);
                     //XSSFCell cell = wSheet.getRow(i).getCell(colNum);
                     cell.setCellType(CellType.STRING);
