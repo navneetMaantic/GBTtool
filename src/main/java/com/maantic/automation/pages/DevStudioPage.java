@@ -14,6 +14,15 @@ public class DevStudioPage extends BasePage {
     private By td_decision_table = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span/a[text()='Decision Table']/ancestor::tr[1]/td[1]/span");
     private By td_decision_table_name = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span/a[text()='Decision Table']/following::tr[1]/td[1]/nobr/span/a");
 
+    public By get_td_SLA_Name(String className, String ruleName){
+        return By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span[text()='"+ className +"']/preceding::tr[1]/td/nobr/span/a[text()='"+ ruleName +"']");
+    }
+    public By get_td_Expand(String className){
+        return By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span[text()='"+ className +"']/preceding::td[@class='expandPane    rowHandle evenRow']");
+    }
+    public By get_td_ruleSetVersion(String ruleSetVersion){
+        return By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'" + ruleSetVersion + "')]");
+    }
     //private By tbl_search_results = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/span");
     //private By td_ruleName = By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'PegaFS:08-06-01')]");
     //private By lbl_decisionTableID = By.xpath("//span[@title='Purpose'][contains(text(),'RelatedPartyEnforcedPairs')]");
@@ -29,7 +38,7 @@ public class DevStudioPage extends BasePage {
     }
 
     //click on the search result after verifying ruleName, ruleType & ruleSetVersion
-    public Boolean clickSearchResults(String ruleType, String ruleSetVersion, String ruleName) throws InterruptedException {
+    public Boolean clickSearchResults(String ruleType, String className, String ruleSetVersion, String ruleName) throws InterruptedException {
         Boolean temp = false;
         if (ruleType.equalsIgnoreCase("Decision_Table")) {
             if (CommonUtils.isElementPresent(td_decision_table_name)) {
@@ -44,7 +53,15 @@ public class DevStudioPage extends BasePage {
         } else if (ruleType.equalsIgnoreCase("Activity")) {
 
         } else if (ruleType.equalsIgnoreCase("SLA")) {
-
+            if (CommonUtils.isElementPresent(get_td_SLA_Name(className, ruleName))) {
+                if (CommonUtils.getElementText(get_td_SLA_Name(className, ruleName)).equalsIgnoreCase(ruleName)) {
+                    CommonUtils.waitForVisibilityOfElement(search_txtBox);
+                    CommonUtils.click(get_td_Expand(className));
+                    Thread.sleep(3000);
+                    CommonUtils.click(get_td_ruleSetVersion(ruleSetVersion));
+                    temp = true;
+                }
+            }
         }
         return temp;
     }
