@@ -12,20 +12,34 @@ public class DevStudioPage extends BasePage {
     private By search_txtBox = By.xpath("(//input[contains(@name, 'SearchText')])[1]");
     private By search_icon_btn = By.xpath("//button[@title='Search'][i]");
     private By td_decision_table = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span/a[text()='Decision Table']/ancestor::tr[1]/td[1]/span");
-    private By td_decision_table_name = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span/a[text()='Decision Table']/following::tr[1]/td[1]/nobr/span/a");
+//    private By td_decision_table_name = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span/a[text()='Decision Table']/following::tr[1]/td[1]/nobr/span/a");
 
-    public By get_td_SLA_Name(String className, String ruleName){
+    private By getTdDecisionTableName(String className, String ruleName){
         return By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span[text()='"+ className +"']/preceding::tr[1]/td/nobr/span/a[text()='"+ ruleName +"']");
     }
-    public By get_td_Expand(String className){
+    private By getTdSLAName(String className, String ruleName){
+        return By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span[text()='"+ className +"']/preceding::tr[1]/td/nobr/span/a[text()='"+ ruleName +"']");
+    }
+    private By getTdExpand(String className){
         return By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/div/span[text()='"+ className +"']/preceding::td[@class='expandPane    rowHandle evenRow']");
     }
-    public By get_td_ruleSetVersion(String ruleSetVersion){
+    private By getTdRuleSetVersion(String ruleSetVersion){
         return By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'" + ruleSetVersion + "')]");
     }
-    //private By tbl_search_results = By.xpath("//table[@id='bodyTbl_right']/tbody/tr/td/span");
-    //private By td_ruleName = By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'PegaFS:08-06-01')]");
-    //private By lbl_decisionTableID = By.xpath("//span[@title='Purpose'][contains(text(),'RelatedPartyEnforcedPairs')]");
+    public void temp(String ruleName, String className){
+        List<WebElement> rowList = getDriver().findElements(By.xpath("(//table[@id='bodyTbl_right'])[1]/tbody/tr/td[3]/div"));
+        List<WebElement> rowList2 = getDriver().findElements(By.xpath("(//table[@id='bodyTbl_right'])[1]/tbody/tr/td[4]/div"));
+        int i;
+        for (i=0; i<rowList.size();i++){
+            String lblruleName = rowList.get(i).getText();
+            String lblclassName = rowList2.get(i).getText();
+            if(lblruleName.equalsIgnoreCase(ruleName) && lblclassName.equalsIgnoreCase(className)){
+                System.out.println("temp=" + lblruleName);
+                getDriver().findElement(By.xpath("//a[text()='"+ruleName+"']/preceding::td[@class='expandPane    rowHandle evenRow'][1]")).click();
+                break;
+            }
+        }
+    }
 
     public void enterSearchTermInSearchBox(String item) {    //enter search text in searchBox
         CommonUtils.waitForVisibilityOfElement(search_txtBox);
@@ -41,24 +55,27 @@ public class DevStudioPage extends BasePage {
     public Boolean clickSearchResults(String ruleType, String className, String ruleSetVersion, String ruleName) throws InterruptedException {
         Boolean temp = false;
         if (ruleType.equalsIgnoreCase("Decision_Table")) {
-            if (CommonUtils.isElementPresent(td_decision_table_name)) {
-                if (CommonUtils.getElementText(td_decision_table_name).equalsIgnoreCase(ruleName)) {
+            if (CommonUtils.isElementPresent(getTdDecisionTableName(className, ruleName))) {
+                if (CommonUtils.getElementText(getTdDecisionTableName(className, ruleName)).equalsIgnoreCase(ruleName)) {
                     CommonUtils.waitForVisibilityOfElement(search_txtBox);
-                    CommonUtils.click(td_decision_table);
+                    temp(ruleName, className);
+                    CommonUtils.click(getTdExpand(className));
                     Thread.sleep(3000);
-                    getDriver().findElement(By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'" + ruleSetVersion + "')]")).click();
+                    CommonUtils.click(getTdRuleSetVersion(ruleSetVersion));
+//                    getDriver().findElement(By.xpath("(//table[@id='bodyTbl_right'])[2]/tbody/tr/td/div[contains(text(),'" + ruleSetVersion + "')]")).click();
                     temp = true;
                 }
             }
         } else if (ruleType.equalsIgnoreCase("Activity")) {
 
         } else if (ruleType.equalsIgnoreCase("SLA")) {
-            if (CommonUtils.isElementPresent(get_td_SLA_Name(className, ruleName))) {
-                if (CommonUtils.getElementText(get_td_SLA_Name(className, ruleName)).equalsIgnoreCase(ruleName)) {
+            if (CommonUtils.isElementPresent(getTdSLAName(className, ruleName))) {
+                if (CommonUtils.getElementText(getTdSLAName(className, ruleName)).equalsIgnoreCase(ruleName)) {
                     CommonUtils.waitForVisibilityOfElement(search_txtBox);
-                    CommonUtils.click(get_td_Expand(className));
+                    temp(ruleName, className);
+                    CommonUtils.click(getTdExpand(className));
                     Thread.sleep(3000);
-                    CommonUtils.click(get_td_ruleSetVersion(ruleSetVersion));
+                    CommonUtils.click(getTdRuleSetVersion(ruleSetVersion));
                     temp = true;
                 }
             }

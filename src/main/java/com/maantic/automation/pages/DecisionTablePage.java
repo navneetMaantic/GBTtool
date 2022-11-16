@@ -14,10 +14,14 @@ public class DecisionTablePage extends BasePage {
     private By btn_RunAgain = By.id("RunAgainButton");
     private By txt_RunResult = By.xpath("//p[text()='Return ']/b");
 
+    private By getRuleName(String ruleName){
+        return By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]");
+    }
+
     public boolean isDecisionTableDisplayed(String ruleName) throws InterruptedException {  //check if Decision Table is displayed after clicking on search results
         Thread.sleep(5000);
         CommonUtils.switchToIframe(iframe01_name);
-        return getDriver().findElement(By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]")).isDisplayed();
+        return  CommonUtils.isElementPresent(getRuleName(ruleName));
     }
 
     public void clickActionsRunOfDecisionTable() throws InterruptedException {
