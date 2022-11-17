@@ -25,7 +25,7 @@ public class GBTSLATest extends BasePage {
 
     @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "Verifying the SLA is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
     @Severity(SeverityLevel.NORMAL)
-    @Description("Test Case Description: Verify the Decision Table is working properly.")
+    @Description("Test Case Description: Verify the SLA is working properly.")
     public void SLA(Map<String, String> map) throws InterruptedException {
         loginPage.enterUserNameText("Navneet");
         loginPage.enterPasswordText("rules");
