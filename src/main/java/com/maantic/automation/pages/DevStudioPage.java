@@ -31,7 +31,7 @@ public class DevStudioPage extends BasePage {
             String lblruleName = rowList.get(i).getText();
             String lblclassName = rowList2.get(i).getText();
             if(lblruleName.equalsIgnoreCase(ruleName) && lblclassName.equalsIgnoreCase(className)){
-                getDriver().findElement(By.xpath("//a[text()='"+ruleName+"']/preceding::td[@class='expandPane    rowHandle evenRow'][1]")).click();
+                getDriver().findElement(By.xpath("//a[text()='"+ruleName+"']/preceding::td/span[@class='expandRowDetails'][1]")).click();
                 break;
             }
         }
@@ -57,6 +57,7 @@ public class DevStudioPage extends BasePage {
                     selectCorrectRule(ruleName, className);
                     Thread.sleep(3000);
                     CommonUtils.click(getTdRuleSetVersion(ruleSetVersion));
+                    Thread.sleep(5000);
                     temp = true;
                 }
             }
@@ -69,6 +70,7 @@ public class DevStudioPage extends BasePage {
                     selectCorrectRule(ruleName, className);
                     Thread.sleep(3000);
                     CommonUtils.click(getTdRuleSetVersion(ruleSetVersion));
+                    Thread.sleep(5000);
                     temp = true;
                 }
             }
