@@ -29,12 +29,15 @@ public class GBTDecisionTableTest extends BasePage {
         loginPage.enterPasswordText("rules");
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
-        homePage.enterSearchTermInSearchBox(map.get("RuleName"));
-        homePage.clickOnSearchIcon();
-        Thread.sleep(3000);
+//        homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"));
+//        homePage.enterSearchTermInSearchBox(map.get("RuleName"));
+//        homePage.clickOnSearchIcon();
+//        homePage.selectDropdownContains();
+
         //if correct ruleName present in file
-        if (homePage.clickSearchResults(map.get("RuleType"), map.get("ClassName"), map.get("RuleSetVersion"), map.get("RuleName"))) {
-            Assert.assertEquals(true, dtPage.isDecisionTableDisplayed(map.get("RuleName")));
+//        if (homePage.clickSearchResults(map.get("RuleType"), map.get("ClassName"), map.get("RuleSetVersion"), map.get("RuleName"))) {
+          if(homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
+//              Assert.assertTrue(dtPage.isDecisionTableDisplayed(map.get("RuleName")));
             dtPage.clickActionsRunOfDecisionTable();
             //now switches to decision table window
             String dt_output = dtPage.switchWindowDecisionTable(map.get("Param1"));

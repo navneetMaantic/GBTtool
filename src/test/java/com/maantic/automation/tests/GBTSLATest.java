@@ -31,12 +31,14 @@ public class GBTSLATest extends BasePage {
         loginPage.enterPasswordText("rules");
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
-        homePage.enterSearchTermInSearchBox(map.get("RuleName"));
-        homePage.clickOnSearchIcon();
-        Thread.sleep(3000);
+//        homePage.enterSearchTermInSearchBox(map.get("RuleName"));
+//        homePage.clickOnSearchIcon();
+//        Thread.sleep(3000);
+
         //if correct ruleName present in file
-        if (homePage.clickSearchResults(map.get("RuleType"), map.get("ClassName"), map.get("RuleSetVersion"), map.get("RuleName"))) {
-            Assert.assertEquals(true, slaPage.isSLADisplayed(map.get("RuleName")));
+//        if (homePage.clickSearchResults(map.get("RuleType"), map.get("ClassName"), map.get("RuleSetVersion"), map.get("RuleName"))) {
+        if(homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
+//            Assert.assertEquals(true, slaPage.isSLADisplayed(map.get("RuleName")));
             String sla_output = "true";
             for(int i = 1; i <=12; i++){
                 if(!slaPage.validateSLAValues(i, map.get("Param"+i+""))){
