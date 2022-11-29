@@ -20,15 +20,15 @@ public class SLAPage extends BasePage {
     private By txt_PassedDeadlineMins = By.xpath("//h2[contains(text(), 'Passed deadline')]/following::input[4]");
     private By txt_PassedDeadlineSecs = By.xpath("//h2[contains(text(), 'Passed deadline')]/following::input[5]");
 
-    private By getRuleName(String ruleName){
-        return By.xpath("//span[@title='Service Level'][contains(text(),'"+ruleName+"')]");
-    }
-
-    public boolean isSLADisplayed(String ruleName) throws InterruptedException {  //check if Decision Table is displayed after clicking on search results
-        Thread.sleep(5000);
-        CommonUtils.switchToIframe(iframe01_name);
-        return  CommonUtils.isElementPresent(getRuleName(ruleName));
-    }
+//    private By getRuleName(String ruleName){
+//        return By.xpath("//span[@title='Service Level'][contains(text(),'"+ruleName+"')]");
+//    }
+//
+//    public boolean isSLADisplayed(String ruleName) throws InterruptedException {  //check if Decision Table is displayed after clicking on search results
+//        Thread.sleep(5000);
+//        CommonUtils.switchToIframe(iframe01_name);
+//        return  CommonUtils.isElementPresent(getRuleName(ruleName));
+//    }
 
     public Boolean validateSLAValues(int i, String inputParam){
         Boolean temp = false;

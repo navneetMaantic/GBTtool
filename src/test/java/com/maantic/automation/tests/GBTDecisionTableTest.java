@@ -9,6 +9,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -58,7 +59,11 @@ public class GBTDecisionTableTest extends BasePage {
             ExcelUtils.writeExcelData("RuleName not found", map.get("RuleType"), 18); //'Pass/Fail' column=18
             System.out.println("Fail");
         }
+    }
 
+    @AfterMethod
+    public void closeBrowser(){
+        getDriver().close();
     }
 
 }
