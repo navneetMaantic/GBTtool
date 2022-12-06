@@ -1,5 +1,6 @@
 package com.maantic.automation.utils;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -20,12 +21,20 @@ public class ExcelUtils {
 
     public static List<Map<String, String>> getExcelData(String sheetName) {
         List<Map<String, String>> list = null;
+        //copy files
+        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
+        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+        try {
+            FileUtils.copyFile(sourceExcel, dstExcel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         FileInputStream fs;
 
         try {
             // System.out.println("Data File"+Constants.TEST_DATA_SHEET_PATH);
-            fs = new FileInputStream(Constants.TEST_DATA_SHEET_PATH);
+            fs = new FileInputStream(Constants.TEST_OUT_DATA_SHEET_PATH);
             XSSFWorkbook wb = new XSSFWorkbook(fs);
             XSSFSheet wSheet = wb.getSheet(sheetName);
 
@@ -59,7 +68,7 @@ public class ExcelUtils {
     public static void writeExcelData(String writeOutput, String ruleType, int colNum) {
         XSSFWorkbook workbook = null;
         try {
-            FileInputStream file = new FileInputStream(new File(Constants.TEST_DATA_SHEET_PATH));
+            FileInputStream file = new FileInputStream(new File(Constants.TEST_OUT_DATA_SHEET_PATH));
             workbook = new XSSFWorkbook(file);
             XSSFSheet wSheet = workbook.getSheet(Constants.EXCEL_SHEET_NAME);
 
@@ -83,7 +92,7 @@ public class ExcelUtils {
         }
         try {
             FileOutputStream out = new FileOutputStream(new
-                    File(Constants.TEST_DATA_SHEET_PATH));
+                    File(Constants.TEST_OUT_DATA_SHEET_PATH));
             workbook.write(out);
             workbook.close();
             out.close();
