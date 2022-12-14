@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GBT(failed)">
+    <classes>
+      <class name="com.maantic.automation.tests.GBTSLATest">
+        <methods>
+          <include name="getEnvironment"/>
+          <include name="closeBrowser"/>
+          <include name="initializeDriver"/>
+          <include name="SLA"/>
+        </methods>
+      </class> <!-- com.maantic.automation.tests.GBTSLATest -->
+      <class name="com.maantic.automation.tests.GBTDecisionTableTest">
+        <methods>
+          <include name="Decision_Table"/>
+          <include name="getEnvironment"/>
+          <include name="initializeDriver"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest -->
+      <class name="com.maantic.automation.tests.GBTActivityTest">
+        <methods>
+          <include name="getEnvironment"/>
+          <include name="closeBrowser"/>
+          <include name="initializeDriver"/>
+          <include name="Activity"/>
+        </methods>
+      </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
+    </classes>
+  </test> <!-- GBT(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

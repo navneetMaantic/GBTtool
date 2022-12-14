@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="5" passed="0" failed="0" skipped="3">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-14T15:10:55 IST" name="All Test Suite" finished-at="2022-12-14T15:10:55 IST" duration-ms="314">
+    <groups>
+      <group name="Sanity">
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@1d1f7216]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
+        <method signature="GBTDecisionTableTest.Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@7c351808]" name="Decision_Table" class="com.maantic.automation.tests.GBTDecisionTableTest"/>
+        <method signature="GBTSLATest.SLA(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest@305f031]" name="SLA" class="com.maantic.automation.tests.GBTSLATest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@1d1f7216]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
+        <method signature="GBTDecisionTableTest.Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@7c351808]" name="Decision_Table" class="com.maantic.automation.tests.GBTDecisionTableTest"/>
+        <method signature="GBTSLATest.SLA(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest@305f031]" name="SLA" class="com.maantic.automation.tests.GBTSLATest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2022-12-14T15:10:55 IST" name="GBT" finished-at="2022-12-14T15:10:55 IST" duration-ms="314">
+      <class name="com.maantic.automation.tests.GBTActivityTest">
+        <test-method signature="Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@1d1f7216]" started-at="2022-12-14T15:10:55 IST" name="Activity" description="Verifying the Activity is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-14T15:10:55 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.maantic.automation.tests.TestRunner.main(TestRunner.java:25)
+Caused by: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.apache.commons.io.FileUtils.requireCanonicalPathsNotEquals(FileUtils.java:2603)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:842)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.maantic.automation.utils.ExcelUtils.getExcelData(ExcelUtils.java:28)
+at com.maantic.automation.utils.ExcelDataProvider.getLoginTestDataGBT(ExcelDataProvider.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Activity -->
+      </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
+      <class name="com.maantic.automation.tests.GBTSLATest">
+        <test-method signature="SLA(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest@305f031]" started-at="2022-12-14T15:10:55 IST" name="SLA" description="Verifying the SLA is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-14T15:10:55 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.maantic.automation.tests.TestRunner.main(TestRunner.java:25)
+Caused by: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.apache.commons.io.FileUtils.requireCanonicalPathsNotEquals(FileUtils.java:2603)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:842)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.maantic.automation.utils.ExcelUtils.getExcelData(ExcelUtils.java:28)
+at com.maantic.automation.utils.ExcelDataProvider.getLoginTestDataGBT(ExcelDataProvider.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SLA -->
+      </class> <!-- com.maantic.automation.tests.GBTSLATest -->
+      <class name="com.maantic.automation.tests.GBTDecisionTableTest">
+        <test-method is-config="true" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@7c351808]" started-at="2022-12-14T15:10:55 IST" name="getEnvironment" finished-at="2022-12-14T15:10:55 IST" duration-ms="152" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnvironment -->
+        <test-method signature="Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@7c351808]" started-at="2022-12-14T15:10:55 IST" name="Decision_Table" description="Verifying the Decision Table is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-14T15:10:55 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:798)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.maantic.automation.tests.TestRunner.main(TestRunner.java:25)
+Caused by: java.lang.IllegalArgumentException: File canonical paths are equal: 'C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx' (file1='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx', file2='C:\Users\User\IdeaProjects\pega-automation-framework\src\main\resources\exceltestdata\GBT.xlsx')
+at org.apache.commons.io.FileUtils.requireCanonicalPathsNotEquals(FileUtils.java:2603)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:842)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.maantic.automation.utils.ExcelUtils.getExcelData(ExcelUtils.java:28)
+at com.maantic.automation.utils.ExcelDataProvider.getLoginTestDataGBT(ExcelDataProvider.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Decision_Table -->
+      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest -->
+    </test> <!-- GBT -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
