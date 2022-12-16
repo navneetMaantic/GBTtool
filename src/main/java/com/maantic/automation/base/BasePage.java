@@ -14,6 +14,8 @@ import org.testng.annotations.Optional;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.Duration;
@@ -31,29 +33,29 @@ public class BasePage {
     @BeforeSuite
     @Parameters({"browser"})
     public void getEnvironment(@Optional String browser){
-        System.out.println("Testing");
+        System.out.println("Testing started");
 
         try {
-            InputStream input = BasePage.class.getClassLoader().getResourceAsStream("common.properties");
+//            InputStream input = BasePage.class.getClassLoader().getResourceAsStream("common.properties");
+//            if (input == null) {
+//                System.out.println("Sorry, unable to find common.properties");
+//                return;
+//            }
+//            Properties prop = new Properties();
+//            // load a properties file from class path, inside static method
+//            prop.load(input);
+//            // get the property value and print it out
+//            System.out.println(prop.getProperty("app"));
+//            if(prop.getProperty("app")!=null) {
+//                appUrl = prop.getProperty("app");
+//            }else{
+//                appUrl = prop.getProperty("defaulturl");
+//            }
+//            // System.out.println(prop.getProperty("additional"));
+//            System.out.println(prop.getProperty("message"));
+        	appUrl = "https://bfs.maanticpegaservices.com/prweb";
 
-            if (input == null) {
-                System.out.println("Sorry, unable to find common.properties");
-                return;
-            }
-            Properties prop = new Properties();
-            // load a properties file from class path, inside static method
-            prop.load(input);
-            // get the property value and print it out
-            System.out.println(prop.getProperty("app"));
-            if(prop.getProperty("app")!=null) {
-                appUrl = prop.getProperty("app");
-            }else{
-                appUrl = prop.getProperty("defaulturl");
-            }
-            // System.out.println(prop.getProperty("additional"));
-            System.out.println(prop.getProperty("message"));
-
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
