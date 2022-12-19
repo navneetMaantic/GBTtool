@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="All Test Suite" duration-ms="175296" started-at="2022-12-16T13:25:16 IST" finished-at="2022-12-16T13:28:11 IST">
+  <suite name="All Test Suite" duration-ms="155164" started-at="2022-12-19T17:02:24 IST" finished-at="2022-12-19T17:04:59 IST">
     <groups>
       <group name="Sanity">
-        <method signature="GBTDecisionTableTest.Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="Decision_Table" class="com.maantic.automation.tests.GBTDecisionTableTest"/>
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
       </group> <!-- Sanity -->
       <group name="Regression">
-        <method signature="GBTDecisionTableTest.Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="Decision_Table" class="com.maantic.automation.tests.GBTDecisionTableTest"/>
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="GBT" duration-ms="175296" started-at="2022-12-16T13:25:16 IST" finished-at="2022-12-16T13:28:11 IST">
-      <class name="com.maantic.automation.tests.GBTDecisionTableTest">
-        <test-method status="PASS" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="getEnvironment" is-config="true" duration-ms="46" started-at="2022-12-16T13:25:16 IST" finished-at="2022-12-16T13:25:16 IST">
+    <test name="GBT3" duration-ms="155164" started-at="2022-12-19T17:02:24 IST" finished-at="2022-12-19T17:04:59 IST">
+      <class name="com.maantic.automation.tests.GBTActivityTest">
+        <test-method status="PASS" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="getEnvironment" is-config="true" duration-ms="75" started-at="2022-12-19T17:02:24 IST" finished-at="2022-12-19T17:02:24 IST">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEnvironment -->
-        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="initializeDriver" is-config="true" duration-ms="5001" started-at="2022-12-16T13:25:16 IST" finished-at="2022-12-16T13:25:21 IST">
+        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="initializeDriver" is-config="true" duration-ms="6015" started-at="2022-12-19T17:02:25 IST" finished-at="2022-12-19T17:02:31 IST">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -31,22 +31,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="Decision_Table" duration-ms="39565" started-at="2022-12-16T13:25:21 IST" description="Verifying the Decision Table is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-16T13:26:01 IST">
+        <test-method status="PASS" signature="Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" duration-ms="72863" started-at="2022-12-19T17:02:31 IST" description="Verifying the Activity is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-19T17:03:44 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Param10=NA, Param11=NA, Expected=true, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Decision_Table, Param2=NA, Pass/Fail=NA, Param1=aff, RuleSetVersion=PegaFS:08-06-01, ClassName=PegaFS-Data-RelCodes, Actual=NA, RuleName=xyz}]]>
+                <![CDATA[{Param10=NA, Param11=NA, Expected=Success, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Activity, Param2=NA, Pass/Fail=NA, Param1=NA, RuleSetVersion=BFSCS_Branch_Changes:01-01-01, ClassName=MNTC-BFSCS-Work-Grp1-Interaction-InCorr, Actual=NA, RuleName=CAInitialSetUp}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Decision_Table -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="closeBrowser" is-config="true" duration-ms="151" started-at="2022-12-16T13:26:01 IST" finished-at="2022-12-16T13:26:01 IST">
+        </test-method> <!-- Activity -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="closeBrowser" is-config="true" duration-ms="16285" started-at="2022-12-19T17:03:44 IST" finished-at="2022-12-19T17:04:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="initializeDriver" is-config="true" duration-ms="4095" started-at="2022-12-16T13:26:01 IST" finished-at="2022-12-16T13:26:05 IST">
+        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="initializeDriver" is-config="true" duration-ms="3923" started-at="2022-12-19T17:04:00 IST" finished-at="2022-12-19T17:04:04 IST">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -55,46 +55,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="Decision_Table" duration-ms="61881" started-at="2022-12-16T13:26:05 IST" description="Verifying the Decision Table is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-16T13:27:07 IST">
+        <test-method status="PASS" signature="Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" duration-ms="39189" started-at="2022-12-19T17:04:04 IST" description="Verifying the Activity is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-19T17:04:43 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Param10=NA, Param11=NA, Expected=true, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Decision_Table, Param2=NA, Pass/Fail=NA, Param1=aff, RuleSetVersion=PegaFS:08-06-01, ClassName=PegaFS-Data-RelCodes, Actual=NA, RuleName=RelatedPartyEnforcedPairs}]]>
+                <![CDATA[{Param10=NA, Param11=NA, Expected=Success, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Activity, Param2=NA, Pass/Fail=NA, Param1=NA, RuleSetVersion=BFSCS_Branch_Changes:01-01-01, ClassName=MNTC-BFSCS-Work-Grp1-Interaction-InCorr, Actual=NA, RuleName=xyz}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Decision_Table -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="closeBrowser" is-config="true" duration-ms="183" started-at="2022-12-16T13:27:07 IST" finished-at="2022-12-16T13:27:07 IST">
+        </test-method> <!-- Activity -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="closeBrowser" is-config="true" duration-ms="16276" started-at="2022-12-19T17:04:43 IST" finished-at="2022-12-19T17:04:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="initializeDriver" is-config="true" duration-ms="3865" started-at="2022-12-16T13:27:07 IST" finished-at="2022-12-16T13:27:11 IST">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
+        <test-method status="PASS" signature="resultSheet()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="resultSheet" is-config="true" duration-ms="8" started-at="2022-12-19T17:04:59 IST" finished-at="2022-12-19T17:04:59 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="Decision_Table(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="Decision_Table" duration-ms="59852" started-at="2022-12-16T13:27:11 IST" description="Verifying the Decision Table is working properly." data-provider="ExcelTestDataGBT" finished-at="2022-12-16T13:28:11 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Param10=NA, Param11=NA, Expected=true, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Decision_Table, Param2=NA, Pass/Fail=NA, Param1=BRO, RuleSetVersion=PegaFS:08-06-01, ClassName=PegaFS-Data-RelCodes, Actual=NA, RuleName=RelatedPartyEnforcedPairs}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Decision_Table -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest@57d7f8ca]" name="closeBrowser" is-config="true" duration-ms="145" started-at="2022-12-16T13:28:11 IST" finished-at="2022-12-16T13:28:11 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest -->
-    </test> <!-- GBT -->
+        </test-method> <!-- resultSheet -->
+      </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
+    </test> <!-- GBT3 -->
   </suite> <!-- All Test Suite -->
 </testng-results>

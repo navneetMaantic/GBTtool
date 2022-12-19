@@ -1,7 +1,9 @@
 package com.maantic.automation.base;
 
 import com.google.common.collect.ImmutableMap;
+import com.maantic.automation.utils.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -126,5 +128,16 @@ public class BasePage {
     //@AfterMethod
     public void closeDriver(){
         getDriver().quit();
+    }
+
+    @AfterSuite
+    public void resultSheet(){
+        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
+        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+        try {
+            FileUtils.copyFile(sourceExcel, dstExcel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

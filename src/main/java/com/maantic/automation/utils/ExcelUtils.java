@@ -34,7 +34,7 @@ public class ExcelUtils {
 
         try {
             // System.out.println("Data File"+Constants.TEST_DATA_SHEET_PATH);
-            fs = new FileInputStream(Constants.TEST_OUT_DATA_SHEET_PATH);
+            fs = new FileInputStream(Constants.TEST_DATA_SHEET_PATH);
             XSSFWorkbook wb = new XSSFWorkbook(fs);
             XSSFSheet wSheet = wb.getSheet(sheetName);
 
@@ -68,7 +68,7 @@ public class ExcelUtils {
     public static void writeExcelData(String writeOutput, String ruleType, int colNum) {
         XSSFWorkbook workbook = null;
         try {
-            FileInputStream file = new FileInputStream(new File(Constants.TEST_OUT_DATA_SHEET_PATH));
+            FileInputStream file = new FileInputStream(new File(Constants.TEST_DATA_SHEET_PATH));
             workbook = new XSSFWorkbook(file);
             XSSFSheet wSheet = workbook.getSheet(Constants.EXCEL_SHEET_NAME);
 
@@ -92,7 +92,7 @@ public class ExcelUtils {
         }
         try {
             FileOutputStream out = new FileOutputStream(new
-                    File(Constants.TEST_OUT_DATA_SHEET_PATH));
+                    File(Constants.TEST_DATA_SHEET_PATH));
             workbook.write(out);
             workbook.close();
             out.close();
