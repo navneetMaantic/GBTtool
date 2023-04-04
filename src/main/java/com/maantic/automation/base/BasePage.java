@@ -85,6 +85,7 @@ public class BasePage {
             WebDriverManager.chromedriver().setup();
             System.setProperty("webdriver.chrome.silentOutput", "true");
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*"); //added 4apr
             Map<String, Object> prefs = new HashMap<String, Object>();
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);

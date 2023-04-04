@@ -3,28 +3,13 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="GBT(failed)">
     <classes>
-      <class name="com.maantic.automation.tests.GBTSLATest">
-        <methods>
-          <include name="getEnvironment"/>
-          <include name="closeBrowser"/>
-          <include name="initializeDriver"/>
-          <include name="SLA"/>
-        </methods>
-      </class> <!-- com.maantic.automation.tests.GBTSLATest -->
-      <class name="com.maantic.automation.tests.GBTDecisionTableTest">
-        <methods>
-          <include name="Decision_Table"/>
-          <include name="getEnvironment"/>
-          <include name="initializeDriver"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest -->
       <class name="com.maantic.automation.tests.GBTActivityTest">
         <methods>
+          <include name="resultSheet"/>
           <include name="getEnvironment"/>
           <include name="closeBrowser"/>
           <include name="initializeDriver"/>
-          <include name="Activity"/>
+          <include name="Activity" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
     </classes>

@@ -20,6 +20,7 @@ public class TestRunner {
         TestNG testng = new TestNG();
         List<String> suites = Lists.newArrayList();
         suites.add(System.getProperty("user.dir")+"\\"+args[0]);
+//        suites.add(System.getProperty("user.dir")+"\\testng.xml");
 //        suites.add("C:\\Users\\User\\IdeaProjects\\pega-automation-framework\\testng.xml");
 //        suites.add("c:/tests/testng2.xml");
         testng.setTestSuites(suites);
