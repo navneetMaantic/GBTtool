@@ -36,7 +36,6 @@ public class ExcelDataProvider {
             System.out.println("Test Case Name: "+list.get(i).get("RuleType"));
             if(list.get(i).get("RuleType").trim().equalsIgnoreCase(testCase)){
                 smallList.add(list.get(i));
-                break;
             }
         }
         return smallList.toArray();

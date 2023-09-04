@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="117729" started-at="2023-04-04T12:39:53 IST" finished-at="2023-04-04T12:41:51 IST">
+    <groups>
+      <group name="Sanity">
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="GBTActivityTest.Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" class="com.maantic.automation.tests.GBTActivityTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="GBT3" duration-ms="117729" started-at="2023-04-04T12:39:53 IST" finished-at="2023-04-04T12:41:51 IST">
+      <class name="com.maantic.automation.tests.GBTActivityTest">
+        <test-method status="PASS" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="getEnvironment" is-config="true" duration-ms="53" started-at="2023-04-04T12:39:53 IST" finished-at="2023-04-04T12:39:53 IST">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEnvironment -->
+        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="initializeDriver" is-config="true" duration-ms="4780" started-at="2023-04-04T12:39:53 IST" finished-at="2023-04-04T12:39:58 IST">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" duration-ms="70786" started-at="2023-04-04T12:39:58 IST" description="Verifying the Activity is working properly." data-provider="ExcelTestDataGBT" finished-at="2023-04-04T12:41:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Param10=NA, Param11=NA, Expected=Success, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Activity, Param2=NA, Pass/Fail=Pass, Param1=NA, RuleSetVersion=BFSCS_Branch_Changes:01-01-01, ClassName=MNTC-BFSCS-Work-Grp1-Interaction-InCorr, Actual=Success, RuleName=CAInitialSetUp}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Activity -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="closeBrowser" is-config="true" duration-ms="109" started-at="2023-04-04T12:41:09 IST" finished-at="2023-04-04T12:41:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="initializeDriver" is-config="true" duration-ms="3415" started-at="2023-04-04T12:41:09 IST" finished-at="2023-04-04T12:41:13 IST">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method status="PASS" signature="Activity(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="Activity" duration-ms="38049" started-at="2023-04-04T12:41:13 IST" description="Verifying the Activity is working properly." data-provider="ExcelTestDataGBT" finished-at="2023-04-04T12:41:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Param10=NA, Param11=NA, Expected=Success, Param12=NA, Param9=NA, Param8=NA, Param7=NA, Param6=NA, Param5=NA, Param4=NA, Param3=NA, RuleType=Activity, Param2=NA, Pass/Fail=RuleName not found, Param1=NA, RuleSetVersion=BFSCS_Branch_Changes:01-01-01, ClassName=MNTC-BFSCS-Work-Grp1-Interaction-InCorr, Actual=NA, RuleName=xyz}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Activity -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="closeBrowser" is-config="true" duration-ms="94" started-at="2023-04-04T12:41:51 IST" finished-at="2023-04-04T12:41:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="resultSheet()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest@76c3e77a]" name="resultSheet" is-config="true" duration-ms="9" started-at="2023-04-04T12:41:51 IST" finished-at="2023-04-04T12:41:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resultSheet -->
+      </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
+    </test> <!-- GBT3 -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

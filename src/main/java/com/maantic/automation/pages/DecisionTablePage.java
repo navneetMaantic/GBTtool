@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 public class DecisionTablePage extends BasePage {
 
-    private By iframe01_name = By.xpath("//iframe[@name='PegaGadget0Ifr']");
+    private By iframe01_name = By.xpath("//iframe[@name='PegaGadget1Ifr']");
     private By frameDecisionTableRun = By.id("RunRuleBottom");
     private By btn_Actions = By.xpath("//button[text()='Actions']");
     private By btn_ActionsRun = By.xpath("(//span[text()='Run'])[2]");
@@ -14,14 +14,17 @@ public class DecisionTablePage extends BasePage {
     private By btn_RunAgain = By.id("RunAgainButton");
     private By txt_RunResult = By.xpath("//p[text()='Return ']/b");
 
-    public boolean isDecisionTableDisplayed(String ruleName) throws InterruptedException {  //check if Decision Table is displayed after clicking on search results
-        Thread.sleep(5000);
-        CommonUtils.switchToIframe(iframe01_name);
-        return getDriver().findElement(By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]")).isDisplayed();
-    }
+//    private By getRuleName(String ruleName){
+//        return By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]");
+//    }
+//
+//    public boolean isDecisionTableDisplayed(String ruleName) throws InterruptedException {  //check if Decision Table is displayed after clicking on search results
+//        Thread.sleep(5000);
+//        //CommonUtils.switchToIframe(iframe01_name);
+//        return  CommonUtils.isElementPresent(getRuleName(ruleName));
+//    }
 
     public void clickActionsRunOfDecisionTable() throws InterruptedException {
-        //CommonUtils.switchToIframe(iframe01_name);
         CommonUtils.click(btn_Actions);
         Thread.sleep(3000);
         CommonUtils.click(btn_ActionsRun);

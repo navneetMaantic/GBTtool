@@ -1,21 +1,30 @@
 package com.maantic.automation.base;
 
 import com.google.common.collect.ImmutableMap;
+import com.maantic.automation.utils.Constants;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
 import org.testng.annotations.*;
+import org.testng.annotations.Optional;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
 public class BasePage {
@@ -26,29 +35,29 @@ public class BasePage {
     @BeforeSuite
     @Parameters({"browser"})
     public void getEnvironment(@Optional String browser){
-        System.out.println("Testing");
+        System.out.println("Testing started");
 
         try {
-            InputStream input = BasePage.class.getClassLoader().getResourceAsStream("common.properties");
+//            InputStream input = BasePage.class.getClassLoader().getResourceAsStream("common.properties");
+//            if (input == null) {
+//                System.out.println("Sorry, unable to find common.properties");
+//                return;
+//            }
+//            Properties prop = new Properties();
+//            // load a properties file from class path, inside static method
+//            prop.load(input);
+//            // get the property value and print it out
+//            System.out.println(prop.getProperty("app"));
+//            if(prop.getProperty("app")!=null) {
+//                appUrl = prop.getProperty("app");
+//            }else{
+//                appUrl = prop.getProperty("defaulturl");
+//            }
+//            // System.out.println(prop.getProperty("additional"));
+//            System.out.println(prop.getProperty("message"));
+        	appUrl = "https://bfs.maanticpegaservices.com/prweb";
 
-            if (input == null) {
-                System.out.println("Sorry, unable to find common.properties");
-                return;
-            }
-            Properties prop = new Properties();
-            // load a properties file from class path, inside static method
-            prop.load(input);
-            // get the property value and print it out
-            System.out.println(prop.getProperty("app"));
-            if(prop.getProperty("app")!=null) {
-                appUrl = prop.getProperty("app");
-            }else{
-                appUrl = prop.getProperty("defaulturl");
-            }
-            // System.out.println(prop.getProperty("additional"));
-            System.out.println(prop.getProperty("message"));
-
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
@@ -76,6 +85,7 @@ public class BasePage {
             WebDriverManager.chromedriver().setup();
             System.setProperty("webdriver.chrome.silentOutput", "true");
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*"); //added 4apr
             Map<String, Object> prefs = new HashMap<String, Object>();
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);
@@ -119,5 +129,16 @@ public class BasePage {
     //@AfterMethod
     public void closeDriver(){
         getDriver().quit();
+    }
+
+    @AfterSuite
+    public void resultSheet(){
+        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
+        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+        try {
+            FileUtils.copyFile(sourceExcel, dstExcel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

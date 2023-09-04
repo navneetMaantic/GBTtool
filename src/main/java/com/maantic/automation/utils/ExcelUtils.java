@@ -1,5 +1,6 @@
 package com.maantic.automation.utils;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -20,6 +21,14 @@ public class ExcelUtils {
 
     public static List<Map<String, String>> getExcelData(String sheetName) {
         List<Map<String, String>> list = null;
+        //copy files
+        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
+        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+        try {
+            FileUtils.copyFile(sourceExcel, dstExcel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         FileInputStream fs;
 
@@ -67,10 +76,11 @@ public class ExcelUtils {
             //int lastColNum = wSheet.getRow(0).getLastCellNum();
 
             for (int i = 1; i <= lastRowNum; i++) {
-                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType)){
-                    System.out.println("Row number: "+ i);
-                    XSSFCell cell = wSheet.getRow(i).getCell(colNum);   //column 'Actual'=17
-                    //cell.setCellType(CellType.STRING);
+                //check if current row's ruletype is same & pass/fail is NULL
+                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType) && wSheet.getRow(i).getCell(18) == null){
+                    XSSFCell cell = wSheet.getRow(i).createCell(colNum);
+                    //XSSFCell cell = wSheet.getRow(i).getCell(colNum);
+                    cell.setCellType(CellType.STRING);
                     cell.setCellValue(writeOutput);
                     file.close();
                     break;
@@ -82,8 +92,9 @@ public class ExcelUtils {
         }
         try {
             FileOutputStream out = new FileOutputStream(new
-                    File(Constants.TEST_OUTPUT_SHEET_PATH));
+                    File(Constants.TEST_DATA_SHEET_PATH));
             workbook.write(out);
+            workbook.close();
             out.close();
             System.out.println("Output generated successfully");
         } catch (Exception e) {
