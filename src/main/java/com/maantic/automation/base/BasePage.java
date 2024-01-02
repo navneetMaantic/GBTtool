@@ -20,6 +20,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.channels.SeekableByteChannel;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 import java.util.*;
 import java.util.List;
@@ -29,7 +34,7 @@ import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnviro
 
 public class BasePage {
 
-     static String appUrl;
+    public static String appUrl;
     protected  static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     @BeforeSuite
@@ -56,6 +61,7 @@ public class BasePage {
 //            // System.out.println(prop.getProperty("additional"));
 //            System.out.println(prop.getProperty("message"));
         	appUrl = "https://bfs.maanticpegaservices.com/prweb";
+//        	appUrl = "https://google.com";
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -99,7 +105,7 @@ public class BasePage {
         }
         if(browser.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
-            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
+            System.setProperty(FirefoxDriver.SystemProperty.BROWSER_PROFILE,"null");
             //driver = new FirefoxDriver();
             driver.set(new FirefoxDriver());
             System.out.println("Firefox browser is opening....");
@@ -107,23 +113,26 @@ public class BasePage {
         getDriver().manage().window().maximize();
         getDriver().get(appUrl);
         getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        Robot robot = null;
+//        zoomOutChrome();        
+    }
+
+    public static synchronized WebDriver getDriver() {
+        return driver.get();
+    }
+    public void zoomOutChrome() {
+    	Robot robot = null;
         try {
             robot = new Robot();
         } catch (AWTException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("About to zoom out");
-        for (int i = 0; i < 3; i++) {
+    	System.out.println("About to zoom out");
+    	for (int i = 0; i < 3; i++) {
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_CONTROL);
         }
-    }
-
-    public static synchronized WebDriver getDriver() {
-        return driver.get();
     }
 
     //@AfterMethod
@@ -133,12 +142,25 @@ public class BasePage {
 
     @AfterSuite
     public void resultSheet(){
-        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
-        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+//        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
+//        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
+//        try {
+//            FileUtils.copyFile(sourceExcel, dstExcel);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        Path sourcePath = Paths.get(Constants.TEST_DATA_SHEET_PATH);
+        Path destinationPath = Paths.get(Constants.TEST_OUT_DATA_SHEET_PATH);
+
         try {
-            FileUtils.copyFile(sourceExcel, dstExcel);
-        } catch (IOException e) {
-            e.printStackTrace();
+        	SeekableByteChannel destFileChannel = Files.newByteChannel(destinationPath);
+        	destFileChannel.close(); 
+            Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Excel file copied successfully!");
         }
+        catch (IOException e) {
+          e.printStackTrace();
+          System.err.println("Error copying the Excel file: " + e.getMessage());
+      }
     }
 }

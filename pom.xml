@@ -18,11 +18,11 @@
 
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  was 4.2.0, changed on 28Dec2023-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.2.0</version>
+            <version>4.16.1</version>
         </dependency>
 
         <dependency>
@@ -51,11 +51,11 @@
             <version>2.17.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager was 5.2.0 changed on 28dec2023-->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.2.0</version>
+            <version>5.6.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.github.automatedowl/allure-environment-writer -->

@@ -23,13 +23,23 @@ public class GBTSLATest extends BasePage {
     LoginPage loginPage = new LoginPage();
     DevStudioPage homePage = new DevStudioPage();
     SLAPage slaPage = new SLAPage();
+    String testUsername, testPassword;
 
-    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "Verifying the SLA is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
+    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "fetch URL", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataLogin")
+    public void getURL(Map<String, String> map) throws InterruptedException{   
+    	System.out.println("Test starts");
+    	appUrl = map.get("URL");
+    	testUsername = map.get("Username");
+    	testPassword = map.get("Password");
+    }
+
+    @Test(priority = 2, groups = {"Sanity", "Regression"}, description = "Verifying the SLA is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Case Description: Verify the SLA is working properly.")
     public void SLA(Map<String, String> map) throws InterruptedException {
-        loginPage.enterUserNameText("Navneet");
-        loginPage.enterPasswordText("rules");
+    	zoomOutChrome();
+        loginPage.enterUserNameText(testUsername);
+        loginPage.enterPasswordText(testPassword);
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
 

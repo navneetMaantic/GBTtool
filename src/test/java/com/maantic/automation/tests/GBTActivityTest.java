@@ -10,7 +10,11 @@ import com.maantic.automation.utils.ExcelUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -22,13 +26,23 @@ public class GBTActivityTest extends BasePage {
     LoginPage loginPage = new LoginPage();
     DevStudioPage homePage = new DevStudioPage();
     ActivityPage actPage = new ActivityPage();
+    String testUsername, testPassword;
 
-    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "Verifying the Activity is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
+    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "fetch URL", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataLogin")
+    public void getURL(Map<String, String> map) throws InterruptedException{   
+    	System.out.println("Test starts");
+    	appUrl = map.get("URL");
+    	testUsername = map.get("Username");
+    	testPassword = map.get("Password");
+    }
+    
+    @Test(priority = 2, groups = {"Sanity", "Regression"}, description = "Running Activity module.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
     @Severity(SeverityLevel.NORMAL)
-    @Description("Test Case Description: Verify the Activity is working properly.")
+    @Description("Test Case Description: Running Activity module.")
     public void Activity(Map<String, String> map) throws InterruptedException {
-        loginPage.enterUserNameText("Navneet");
-        loginPage.enterPasswordText("rules");
+    	zoomOutChrome();
+        loginPage.enterUserNameText(testUsername);
+        loginPage.enterPasswordText(testPassword);
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
 

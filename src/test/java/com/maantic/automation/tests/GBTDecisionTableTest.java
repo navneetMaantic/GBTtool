@@ -21,13 +21,23 @@ public class GBTDecisionTableTest extends BasePage {
     LoginPage loginPage = new LoginPage();
     DevStudioPage homePage = new DevStudioPage();
     DecisionTablePage dtPage = new DecisionTablePage();
+    String testUsername, testPassword;
 
-    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "Verifying the Decision Table is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
+    @Test(priority = 1, groups = {"Sanity", "Regression"}, description = "fetch URL", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataLogin")
+    public void getURL(Map<String, String> map) throws InterruptedException{   
+    	System.out.println("Test starts");
+    	appUrl = map.get("URL");
+    	testUsername = map.get("Username");
+    	testPassword = map.get("Password");
+    }
+    
+    @Test(priority = 2, groups = {"Sanity", "Regression"}, description = "Verifying the Decision Table is working properly.", dataProviderClass = ExcelDataProvider.class, dataProvider = "ExcelTestDataGBT")
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Case Description: Verify the Decision Table is working properly.")
     public void Decision_Table(Map<String, String> map) throws InterruptedException {
-        loginPage.enterUserNameText("Navneet");
-        loginPage.enterPasswordText("rules");
+    	zoomOutChrome();
+        loginPage.enterUserNameText(testUsername);
+        loginPage.enterPasswordText(testPassword);
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
 //        homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"));
