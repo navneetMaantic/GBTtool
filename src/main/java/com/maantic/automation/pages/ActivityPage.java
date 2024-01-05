@@ -39,6 +39,8 @@ public class ActivityPage extends BasePage {
         Thread.sleep(5000);
         getDriver().close();
         getDriver().switchTo().window(HandleBefore);
+        getDriver().switchTo().defaultContent();
+        CommonUtils.switchToIframe(iframe01_name);
         return output;
     }
 

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="4" total="10" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-05T16:36:06 IST" name="Default suite" finished-at="2024-01-05T16:38:14 IST" duration-ms="128518">
+  <suite started-at="2024-01-05T16:55:36 IST" name="All Test Suite" finished-at="2024-01-05T17:00:35 IST" duration-ms="299602">
     <groups>
       <group name="Sanity">
-        <method signature="GBTSLATest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" name="getURL" class="com.maantic.automation.tests.GBTSLATest2"/>
+        <method signature="GBTActivityTest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" name="getURL" class="com.maantic.automation.tests.GBTActivityTest2"/>
+        <method signature="GBTDecisionTableTest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" name="getURL" class="com.maantic.automation.tests.GBTDecisionTableTest2"/>
+        <method signature="GBTSLATest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" name="getURL" class="com.maantic.automation.tests.GBTSLATest2"/>
       </group> <!-- Sanity -->
       <group name="Regression">
-        <method signature="GBTSLATest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" name="getURL" class="com.maantic.automation.tests.GBTSLATest2"/>
+        <method signature="GBTActivityTest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" name="getURL" class="com.maantic.automation.tests.GBTActivityTest2"/>
+        <method signature="GBTDecisionTableTest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" name="getURL" class="com.maantic.automation.tests.GBTDecisionTableTest2"/>
+        <method signature="GBTSLATest2.getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" name="getURL" class="com.maantic.automation.tests.GBTSLATest2"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-01-05T16:36:06 IST" name="Default test" finished-at="2024-01-05T16:38:14 IST" duration-ms="128518">
-      <class name="com.maantic.automation.tests.GBTSLATest2">
-        <test-method is-config="true" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:06 IST" name="getEnvironment" finished-at="2024-01-05T16:36:06 IST" duration-ms="84" status="PASS">
+    <test started-at="2024-01-05T16:55:36 IST" name="GBT" finished-at="2024-01-05T17:00:35 IST" duration-ms="299602">
+      <class name="com.maantic.automation.tests.GBTDecisionTableTest2">
+        <test-method is-config="true" signature="getEnvironment(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:36 IST" name="getEnvironment" finished-at="2024-01-05T16:55:36 IST" duration-ms="86" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEnvironment -->
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:06 IST" name="initializeDriver" finished-at="2024-01-05T16:36:10 IST" duration-ms="4027" status="PASS">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:36 IST" name="initializeDriver" finished-at="2024-01-05T16:55:40 IST" duration-ms="3805" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:10 IST" name="getURL" description="fetch URL" data-provider="ExcelTestDataLogin" finished-at="2024-01-05T16:36:10 IST" duration-ms="35" status="PASS">
+        <test-method signature="getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:40 IST" name="getURL" description="fetch URL" data-provider="ExcelTestDataLogin" finished-at="2024-01-05T16:55:40 IST" duration-ms="32" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,11 +50,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getURL -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:10 IST" name="closeBrowser" finished-at="2024-01-05T16:36:11 IST" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:40 IST" name="closeBrowser" finished-at="2024-01-05T16:55:40 IST" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:11 IST" name="initializeDriver" finished-at="2024-01-05T16:36:14 IST" duration-ms="3232" status="PASS">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:40 IST" name="initializeDriver" finished-at="2024-01-05T16:55:43 IST" duration-ms="3099" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,19 +65,113 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="SLA()[pri:2, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:36:14 IST" name="SLA" finished-at="2024-01-05T16:38:14 IST" duration-ms="120247" status="PASS">
+        <test-method signature="Decision_Table()[pri:2, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:55:43 IST" name="Decision_Table" finished-at="2024-01-05T16:57:07 IST" duration-ms="83915" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SLA -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:38:14 IST" name="closeBrowser" finished-at="2024-01-05T16:38:14 IST" duration-ms="162" status="PASS">
+        </test-method> <!-- Decision_Table -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T16:57:07 IST" name="closeBrowser" finished-at="2024-01-05T16:57:07 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="resultSheet()[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@1b5bc39d]" started-at="2024-01-05T16:38:14 IST" name="resultSheet" finished-at="2024-01-05T16:38:19 IST" duration-ms="5048" status="PASS">
+        <test-method is-config="true" signature="resultSheet()[pri:0, instance:com.maantic.automation.tests.GBTDecisionTableTest2@34abdee4]" started-at="2024-01-05T17:00:35 IST" name="resultSheet" finished-at="2024-01-05T17:00:40 IST" duration-ms="5036" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resultSheet -->
+      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest2 -->
+      <class name="com.maantic.automation.tests.GBTSLATest2">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:57:08 IST" name="initializeDriver" finished-at="2024-01-05T16:57:11 IST" duration-ms="3081" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:57:11 IST" name="getURL" description="fetch URL" data-provider="ExcelTestDataLogin" finished-at="2024-01-05T16:57:11 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AppDetails=getURL, Username=Navneet, URL=https://bfs.maanticpegaservices.com/prweb, Password=rules}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getURL -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:57:11 IST" name="closeBrowser" finished-at="2024-01-05T16:57:11 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:57:11 IST" name="initializeDriver" finished-at="2024-01-05T16:57:14 IST" duration-ms="3100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="SLA()[pri:2, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:57:14 IST" name="SLA" finished-at="2024-01-05T16:59:12 IST" duration-ms="117967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SLA -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTSLATest2@52350abb]" started-at="2024-01-05T16:59:12 IST" name="closeBrowser" finished-at="2024-01-05T16:59:12 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.maantic.automation.tests.GBTSLATest2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.maantic.automation.tests.GBTActivityTest2">
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T16:59:12 IST" name="initializeDriver" finished-at="2024-01-05T16:59:15 IST" duration-ms="3010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="getURL(java.util.Map)[pri:1, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T16:59:15 IST" name="getURL" description="fetch URL" data-provider="ExcelTestDataLogin" finished-at="2024-01-05T16:59:15 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AppDetails=getURL, Username=Navneet, URL=https://bfs.maanticpegaservices.com/prweb, Password=rules}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getURL -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T16:59:15 IST" name="closeBrowser" finished-at="2024-01-05T16:59:15 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="initializeDriver(java.lang.String)[pri:0, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T16:59:15 IST" name="initializeDriver" finished-at="2024-01-05T16:59:18 IST" duration-ms="3130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method signature="Activity()[pri:2, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T16:59:18 IST" name="Activity" finished-at="2024-01-05T17:00:35 IST" duration-ms="76781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Activity -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.maantic.automation.tests.GBTActivityTest2@1a6f2363]" started-at="2024-01-05T17:00:35 IST" name="closeBrowser" finished-at="2024-01-05T17:00:35 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.maantic.automation.tests.GBTActivityTest2 -->
+    </test> <!-- GBT -->
+  </suite> <!-- All Test Suite -->
 </testng-results>
