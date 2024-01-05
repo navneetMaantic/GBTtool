@@ -2,6 +2,8 @@ package com.maantic.automation.base;
 
 import com.google.common.collect.ImmutableMap;
 import com.maantic.automation.utils.Constants;
+import com.maantic.automation.utils.ExcelUtils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
@@ -127,7 +129,7 @@ public class BasePage {
             throw new RuntimeException(e);
         }
     	System.out.println("About to zoom out");
-    	for (int i = 0; i < 3; i++) {
+    	for (int i = 0; i < 2; i++) {
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_MINUS);
             robot.keyRelease(KeyEvent.VK_MINUS);
@@ -141,7 +143,7 @@ public class BasePage {
     }
 
     @AfterSuite
-    public void resultSheet(){
+    public void resultSheet() {
 //        File sourceExcel = new File(Constants.TEST_DATA_SHEET_PATH);
 //        File dstExcel = new File(Constants.TEST_OUT_DATA_SHEET_PATH);
 //        try {
@@ -162,5 +164,13 @@ public class BasePage {
           e.printStackTrace();
           System.err.println("Error copying the Excel file: " + e.getMessage());
       }
+        try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        ExcelUtils.writeBlankExcelData("", 17, 18);
     }
+    
 }

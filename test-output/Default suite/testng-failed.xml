@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.maantic.automation.tests.GBTActivityTest">
+      <class name="com.maantic.automation.tests.GBTDecisionTableTest2">
         <methods>
           <include name="resultSheet"/>
           <include name="getEnvironment"/>
           <include name="closeBrowser"/>
+          <include name="Decision_Table"/>
           <include name="initializeDriver"/>
-          <include name="Activity" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.maantic.automation.tests.GBTActivityTest -->
+      </class> <!-- com.maantic.automation.tests.GBTDecisionTableTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

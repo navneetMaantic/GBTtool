@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="GBT">
     <classes>
-        <class name="com.maantic.automation.tests.GBTDecisionTableTest"></class>
-        <class name="com.maantic.automation.tests.GBTSLATest"></class>
-        <class name="com.maantic.automation.tests.GBTActivityTest"></class>
+        <class name="com.maantic.automation.tests.GBTDecisionTableTest2"></class>
+        <class name="com.maantic.automation.tests.GBTSLATest2"></class>
+        <class name="com.maantic.automation.tests.GBTActivityTest2"></class>
     </classes>
 </test>
 </suite>

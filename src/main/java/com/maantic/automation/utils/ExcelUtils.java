@@ -77,7 +77,7 @@ public class ExcelUtils {
 
             for (int i = 1; i <= lastRowNum; i++) {
                 //check if current row's ruletype is same & pass/fail is NULL
-                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType) && wSheet.getRow(i).getCell(18) == null){
+                if (wSheet.getRow(i).getCell(0).toString().equals(ruleType) && wSheet.getRow(i).getCell(18).toString().equals("")){
                     XSSFCell cell = wSheet.getRow(i).createCell(colNum);
                     //XSSFCell cell = wSheet.getRow(i).getCell(colNum);
                     cell.setCellType(CellType.STRING);
@@ -97,6 +97,47 @@ public class ExcelUtils {
             workbook.close();
             out.close();
             System.out.println("Output generated successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void writeBlankExcelData(String writeOutput, int colNum, int colNum2) {
+        XSSFWorkbook workbook = null;
+        try {
+            FileInputStream file = new FileInputStream(new File(Constants.TEST_DATA_SHEET_PATH));
+            workbook = new XSSFWorkbook(file);
+            XSSFSheet wSheet = workbook.getSheet(Constants.EXCEL_SHEET_NAME);
+
+            int lastRowNum = wSheet.getLastRowNum();
+            //int lastColNum = wSheet.getRow(0).getLastCellNum();
+
+            for (int i = 1; i <= lastRowNum; i++) {
+                //check if current row's ruletype is same & pass/fail is NULL
+                //if (wSheet.getRow(i).getCell(0).toString().equals(ruleType)) {// && wSheet.getRow(i).getCell(18) == null){
+                    XSSFCell cell = wSheet.getRow(i).createCell(colNum);
+                    XSSFCell cell2 = wSheet.getRow(i).createCell(colNum2);
+                    //XSSFCell cell = wSheet.getRow(i).getCell(colNum);
+                    cell.setCellType(CellType.STRING);
+                    cell.setCellValue(writeOutput);
+                    cell2.setCellType(CellType.STRING);
+                    cell2.setCellValue(writeOutput);
+                    //file.close();
+                    //break;
+                //}
+            }
+            file.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FileOutputStream out = new FileOutputStream(new
+                    File(Constants.TEST_DATA_SHEET_PATH));
+            workbook.write(out);
+            workbook.close();
+            out.close();
+            System.out.println("Blank i/p sheet generated successfully");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -13,6 +13,7 @@ public class DecisionTablePage extends BasePage {
     private By txt_newWindow_RelCode = By.id("RelCode");
     private By btn_RunAgain = By.id("RunAgainButton");
     private By txt_RunResult = By.xpath("//p[text()='Return ']/b");
+    private By btnClose = By.xpath("//button[@title='Close']");
 
 //    private By getRuleName(String ruleName){
 //        return By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]");
@@ -38,6 +39,8 @@ public class DecisionTablePage extends BasePage {
         String output = enterConditionDecisionTable(dt_condition);
         getDriver().close();
         getDriver().switchTo().window(HandleBefore);
+        getDriver().switchTo().defaultContent();
+        CommonUtils.switchToIframe(iframe01_name);
         return output;
     }
 
@@ -48,5 +51,10 @@ public class DecisionTablePage extends BasePage {
         String dt_Output = CommonUtils.getElementText(txt_RunResult);
         System.out.println("Actual Result: "+dt_Output);
         return dt_Output;
+    }
+    
+    public void closeDtable() throws InterruptedException {
+    	CommonUtils.click(btnClose);
+    	Thread.sleep(5000);
     }
 }

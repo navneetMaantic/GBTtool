@@ -110,15 +110,20 @@ public class DevStudioPage extends BasePage {
 //        return temp;
 //    }
 
-    public Boolean selectRuleType(String ruleType, String ruleName, String rulesetVersion) throws InterruptedException {
+    public Boolean selectRuleType(int count, String ruleType, String ruleName, String rulesetVersion) throws InterruptedException {
         Boolean temp = false;
-        CommonUtils.click(lblRecords);
+        if(count == 0) {
+        	CommonUtils.click(lblRecords);
+        }
         Thread.sleep(5000);
         if(ruleType.equalsIgnoreCase("Decision_Table")){
-            CommonUtils.click(lblDecision);
-            Thread.sleep(5000);
-            CommonUtils.click(lblDecisionTable);
-            Thread.sleep(5000);
+        	if(count == 0) {
+        		CommonUtils.click(lblDecision);
+                Thread.sleep(5000);
+                CommonUtils.click(lblDecisionTable);
+                Thread.sleep(5000);	
+        	}
+        	getDriver().switchTo().defaultContent();
             CommonUtils.switchToIframe(iframe01_name);
             CommonUtils.click(filterPurposeDecisionTable);
             Thread.sleep(3000);
@@ -126,47 +131,59 @@ public class DevStudioPage extends BasePage {
             Thread.sleep(2000);
             CommonUtils.click(btnFilterApply);
             Thread.sleep(3000);
-            CommonUtils.click(filterRulesetVersion);
-            Thread.sleep(2000);
-            CommonUtils.enterText(txtFilterRulesetVersion, rulesetVersion);
-            CommonUtils.click(btnFilterApply);
-            Thread.sleep(2000);
             if(!CommonUtils.isElementPresent(imgNoItems)){
-                CommonUtils.click(getRowOfRuletype(ruleName));
-                Thread.sleep(8000);
-                getDriver().switchTo().defaultContent();
-                CommonUtils.switchToIframe(iframe02_name);
-                temp = true;
+            	CommonUtils.click(filterRulesetVersion);
+                Thread.sleep(2000);
+                CommonUtils.enterText(txtFilterRulesetVersion, rulesetVersion);
+                CommonUtils.click(btnFilterApply);
+                Thread.sleep(2000);
+                if(!CommonUtils.isElementPresent(imgNoItems)){
+                    CommonUtils.click(getRowOfRuletype(ruleName));
+                    Thread.sleep(8000);
+                    getDriver().switchTo().defaultContent();
+                    CommonUtils.switchToIframe(iframe02_name);
+                    temp = true;
+                }
             }
+            
         } else if (ruleType.equalsIgnoreCase("SLA")) {
-            CommonUtils.click(lblProcess);
-            Thread.sleep(5000);
-            CommonUtils.click(lblSLA);
-            Thread.sleep(5000);
+            if(count == 0) {
+            	CommonUtils.click(lblProcess);
+                Thread.sleep(5000);
+                CommonUtils.click(lblSLA);
+                Thread.sleep(5000);
+            }
+            getDriver().switchTo().defaultContent();
             CommonUtils.switchToIframe(iframe01_name);
-            CommonUtils.click(filterSLA);
+        	CommonUtils.click(filterSLA);
             Thread.sleep(3000);
             CommonUtils.enterText(txtFilterSLA, ruleName);
             Thread.sleep(2000);
             CommonUtils.click(btnFilterApply);
             Thread.sleep(3000);
-            CommonUtils.click(filterRulesetVersion);
-            Thread.sleep(2000);
-            CommonUtils.enterText(txtFilterRulesetVersion, rulesetVersion);
-            CommonUtils.click(btnFilterApply);
-            Thread.sleep(2000);
             if(!CommonUtils.isElementPresent(imgNoItems)){
-                CommonUtils.click(getRowOfRuletype(ruleName));
-                Thread.sleep(8000);
-                getDriver().switchTo().defaultContent();
-                CommonUtils.switchToIframe(iframe02_name);
-                temp = true;
+            	CommonUtils.click(filterRulesetVersion);
+                Thread.sleep(2000);
+                CommonUtils.enterText(txtFilterRulesetVersion, rulesetVersion);
+                CommonUtils.click(btnFilterApply);
+                Thread.sleep(2000);
+                if(!CommonUtils.isElementPresent(imgNoItems)){
+                    CommonUtils.click(getRowOfRuletype(ruleName));
+                    Thread.sleep(12000);
+                    getDriver().switchTo().defaultContent();
+                    CommonUtils.switchToIframe(iframe02_name);
+                    temp = true;
+                }
             }
+            
         } else if (ruleType.equalsIgnoreCase("Activity")) {
-            CommonUtils.click(lblTechnical);
-            Thread.sleep(5000);
-            CommonUtils.click(lblActivity);
-            Thread.sleep(5000);
+        	if(count ==0) {
+        		CommonUtils.click(lblTechnical);
+                Thread.sleep(5000);
+                CommonUtils.click(lblActivity);
+                Thread.sleep(5000);                	
+        	}
+        	getDriver().switchTo().defaultContent();
             CommonUtils.switchToIframe(iframe01_name);
             CommonUtils.click(filterActivityName);
             Thread.sleep(3000);
@@ -174,18 +191,21 @@ public class DevStudioPage extends BasePage {
             Thread.sleep(2000);
             CommonUtils.click(btnFilterApply);
             Thread.sleep(3000);
-            CommonUtils.click(filterRulesetVersion);
-            Thread.sleep(2000);
-            CommonUtils.enterText(txtFilterActivity, rulesetVersion);
-            CommonUtils.click(btnFilterApply);
-            Thread.sleep(2000);
             if(!CommonUtils.isElementPresent(imgNoItems)){
-                CommonUtils.click(getRowOfRuletype(ruleName));
-                Thread.sleep(8000);
-                getDriver().switchTo().defaultContent();
-                CommonUtils.switchToIframe(iframe02_name);
-                temp = true;
+            	CommonUtils.click(filterRulesetVersion);
+                Thread.sleep(2000);
+                CommonUtils.enterText(txtFilterActivity, rulesetVersion);
+                CommonUtils.click(btnFilterApply);
+                Thread.sleep(2000);
+                if(!CommonUtils.isElementPresent(imgNoItems)){
+                    CommonUtils.click(getRowOfRuletype(ruleName));
+                    Thread.sleep(8000);
+                    getDriver().switchTo().defaultContent();
+                    CommonUtils.switchToIframe(iframe02_name);
+                    temp = true;
+                }
             }
+            
         }
         return temp;
     }

@@ -45,10 +45,10 @@ public class GBTActivityTest extends BasePage {
         loginPage.enterPasswordText(testPassword);
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
+        int count=0;
 
         //if correct ruleName present in file
-        if(homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
-//            Assert.assertEquals(true, slaPage.isSLADisplayed(map.get("RuleName")));
+        if(homePage.selectRuleType(count, map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
             actPage.clickActionsRunOfActivity();
             //now switches to decision table window
             String act_output = actPage.switchWindowActivity();

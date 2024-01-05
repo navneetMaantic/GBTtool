@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="GBT2">
     <classes>
-        <class name="com.maantic.automation.tests.GBTDecisionTableTest"></class>
+        <class name="com.maantic.automation.tests.GBTDecisionTableTest2"></class>
     </classes>
 </test>
 </suite>

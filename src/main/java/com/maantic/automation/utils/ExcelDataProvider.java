@@ -25,7 +25,7 @@ public class ExcelDataProvider {
         return smallList.toArray();
     }
 
-    @DataProvider(name = "ExcelTestDataGBT",parallel = false)
+    @DataProvider(name = "ExcelTestDataGBT",parallel = true)//so that multiple rows are executed parallely
     public static Object[] getLoginTestDataGBT(Method method){
         String testCase = method.getName();
 

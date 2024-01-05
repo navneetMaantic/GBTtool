@@ -11,6 +11,7 @@ public class ActivityPage extends BasePage {
     private By btn_ActionsRun = By.xpath("(//span[text()='Run'])[2]");
     private By btn_RunAgain = By.xpath("//div[contains(text(),'Run')]");
     private By txt_RunResult = By.xpath("//div[@class='error']/h1");
+    private By btnClose = By.xpath("//button[@title='Close']");
 
 //    private By getRuleName(String ruleName){
 //        return By.xpath("//span[@title='Purpose'][contains(text(),'"+ruleName+"')]");
@@ -53,5 +54,10 @@ public class ActivityPage extends BasePage {
         getDriver().close();
         getDriver().switchTo().window(HandleBefore);
         return act_Output;
+    }
+    
+    public void closeActivity() throws InterruptedException {
+    	CommonUtils.click(btnClose);
+    	Thread.sleep(5000);
     }
 }

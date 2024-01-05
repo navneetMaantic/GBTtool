@@ -19,6 +19,7 @@ public class SLAPage extends BasePage {
     private By txt_PassedDeadlineHrs = By.xpath("//h2[contains(text(), 'Passed deadline')]/following::input[3]");
     private By txt_PassedDeadlineMins = By.xpath("//h2[contains(text(), 'Passed deadline')]/following::input[4]");
     private By txt_PassedDeadlineSecs = By.xpath("//h2[contains(text(), 'Passed deadline')]/following::input[5]");
+    private By btnClose = By.xpath("//button[@title='Close']");
 
 //    private By getRuleName(String ruleName){
 //        return By.xpath("//span[@title='Service Level'][contains(text(),'"+ruleName+"')]");
@@ -30,7 +31,7 @@ public class SLAPage extends BasePage {
 //        return  CommonUtils.isElementPresent(getRuleName(ruleName));
 //    }
 
-    public Boolean validateSLAValues(int i, String inputParam){
+    public Boolean validateSLAValues(int i, String inputParam) {
         Boolean temp = false;
         if(i == 1){
             if(CommonUtils.getAttributeValueOfElement("value", txt_GoalDays).equalsIgnoreCase(inputParam)){
@@ -92,6 +93,11 @@ public class SLAPage extends BasePage {
             }
         }
         return temp;
+    }
+    
+    public void closeSLAPage() throws InterruptedException {
+    	CommonUtils.click(btnClose);
+        Thread.sleep(5000);
     }
 
 }

@@ -37,14 +37,15 @@ public class GBTSLATest extends BasePage {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Case Description: Verify the SLA is working properly.")
     public void SLA(Map<String, String> map) throws InterruptedException {
-    	zoomOutChrome();
+//    	zoomOutChrome();
         loginPage.enterUserNameText(testUsername);
         loginPage.enterPasswordText(testPassword);
         loginPage.clickOnLogInButton();
         Thread.sleep(5000);
+        int count=0;
 
         //if correct ruleName present in file
-        if(homePage.selectRuleType(map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
+        if(homePage.selectRuleType(count, map.get("RuleType"), map.get("RuleName"), map.get("RuleSetVersion"))){
 //            Assert.assertEquals(true, slaPage.isSLADisplayed(map.get("RuleName")));
             String sla_output = "true";
             for(int i = 1; i <=12; i++){
@@ -54,8 +55,9 @@ public class GBTSLATest extends BasePage {
                 }
             }
             //writing 'actual' result in file
+            Thread.sleep(3000);
             ExcelUtils.writeExcelData(sla_output, map.get("RuleType"), 17);  //'Actual' column=17
-            Thread.sleep(5000);
+        	Thread.sleep(2000);
             //writing 'pass/fail' in file
             if (map.get("Expected").equalsIgnoreCase(sla_output)) {
                 ExcelUtils.writeExcelData("Pass", map.get("RuleType"), 18); //'Pass/Fail' column=18
